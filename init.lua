@@ -488,6 +488,7 @@ require('lazy').setup({
       { 'williamboman/mason.nvim', opts = {} },
       'williamboman/mason-lspconfig.nvim',
       'WhoIsSethDaniel/mason-tool-installer.nvim',
+      'nvim-java/nvim-java',
 
       -- Useful status updates for LSP.
       { 'j-hui/fidget.nvim', opts = {} },
@@ -811,6 +812,7 @@ require('lazy').setup({
         require('nvim-dap-virtual-text').setup()
       end,
     },
+    'janko/vim-test',
   },
 
   { -- Autoformat
@@ -1111,3 +1113,4 @@ require('lazy').setup({
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+--
