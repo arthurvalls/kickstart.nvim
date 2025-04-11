@@ -441,13 +441,13 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
 
       -- Slightly advanced example of overriding default behavior and theme
-      vim.keymap.set('n', '<leader>/', function()
+      vim.keymap.set('n', '<leader>sq', function()
         -- You can pass additional configuration to Telescope to change the theme, layout, etc.
         builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
           winblend = 10,
           previewer = false,
         })
-      end, { desc = '[/] Fuzzily search in current buffer' })
+      end, { desc = '<leader>sq Fuzzily search in current buffer' })
 
       -- It's also possible to pass additional configuration options.
       --  See `:help telescope.builtin.live_grep()` for information about particular keys
@@ -993,7 +993,7 @@ require('lazy').setup({
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.cmd.colorscheme 'tokyonight-night'
+      vim.cmd.colorscheme 'tokyonight-storm'
     end,
   },
 
