@@ -993,12 +993,19 @@ require('lazy').setup({
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.cmd.colorscheme 'tokyonight-storm'
+      vim.cmd.colorscheme 'rose-pine'
     end,
   },
 
   { 'RRethy/base16-nvim' },
   { 'nvim-tree/nvim-web-devicons' },
+  {
+    'rose-pine/neovim',
+    name = 'rose-pine',
+    config = function()
+      vim.cmd 'colorscheme rose-pine'
+    end,
+  },
   {
     'folke/noice.nvim',
     event = 'VeryLazy',
@@ -1100,6 +1107,7 @@ require('lazy').setup({
       },
       indent = { enable = true, disable = { 'ruby' } },
     },
+
     -- There are additional nvim-treesitter modules that you can use to interact
     -- with nvim-treesitter. You should go explore a few and see what interests you:
     --
