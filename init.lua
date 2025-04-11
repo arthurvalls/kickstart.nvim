@@ -993,9 +993,11 @@ require('lazy').setup({
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.cmd.colorscheme 'tokyonight-night'
+      vim.cmd.colorscheme 'base16-black-metal'
     end,
   },
+
+  { 'RRethy/base16-nvim' },
 
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
@@ -1111,6 +1113,15 @@ require('lazy').setup({
   },
 })
 
+require('base16-colorscheme').with_config {
+  telescope = true,
+  indentblankline = true,
+  notify = true,
+  ts_rainbow = true,
+  cmp = true,
+  illuminate = true,
+  dapui = true,
+}
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
 --
