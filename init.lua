@@ -853,6 +853,7 @@ require('lazy').setup({
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
         javascript = { 'prettierd', 'prettier', stop_after_first = true },
+        json = { 'prettierd', 'prettier', 'jd', spot_after_first = true },
       },
     },
   },
@@ -993,12 +994,17 @@ require('lazy').setup({
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.cmd.colorscheme 'retrobox'
+      vim.cmd.colorscheme 'base16-gruvbox-dark-hard'
     end,
   },
-
   {
     'RRethy/base16-nvim',
+  },
+  {
+    'craftzdog/solarized-osaka.nvim',
+    lazy = false,
+    priority = 1000,
+    opts = {},
   },
   {
     'rcasia/neotest-java',
@@ -1059,18 +1065,17 @@ require('lazy').setup({
     lazy = false,
   },
   { 'nvim-tree/nvim-web-devicons' },
-  -- {
-  --   'rose-pine/neovim',
-  --   name = 'rose-pine',
-  --   config = function()
-  --     vim.cmd 'colorscheme rose-pine'
-  --   end,
-  -- },
+  { 'Mofiqul/dracula.nvim', opts = {} },
+  {
+    'rose-pine/neovim',
+    name = 'rose-pine',
+  },
   {
     'tribela/transparent.nvim',
     event = 'VimEnter',
     config = true,
     auto = true,
+    enabled = false,
   },
   {
     'folke/noice.nvim',
