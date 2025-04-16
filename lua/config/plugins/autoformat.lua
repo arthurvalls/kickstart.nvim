@@ -37,6 +37,7 @@ return { -- Autoformat
       -- You can use 'stop_after_first' to run the first available formatter from the list
       javascript = { 'prettierd', 'prettier', stop_after_first = true },
       json = { 'prettierd', 'prettier', 'jd', spot_after_first = true },
+      markdown = { 'prettierd', 'prettier', 'jd', spot_after_first = true },
     },
   },
 }
