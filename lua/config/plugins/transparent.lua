@@ -3,5 +3,5 @@ return {
   event = 'VimEnter',
   config = true,
   auto = true,
-  enabled = false,
+  enabled = true,
 }
